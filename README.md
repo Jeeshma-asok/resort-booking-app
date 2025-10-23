@@ -18,5 +18,7 @@ Full-stack application for managing resort bookings, consisting of a **React (Vi
 ## 📁 Run Commands
 
 cd <path/to/the/project/folder>
+
+
 ./docker-script.sh
 
