@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+
+  backend:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile

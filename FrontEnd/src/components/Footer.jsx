@@ -11,7 +11,7 @@ function Footer(){
 
         <div>
           <h4 className="font-semibold text-lg">Contact</h4>
-          <p className="mt-2 text-sm text-gray-400">Phone: +1 (555) 123-4567</p>
+          <p className="mt-2 text-sm text-gray-400">Phone: +91 123-456-7890</p>
           <p className="mt-1 text-sm text-gray-400">Email: hello@seasideserenity.example</p>
         </div>
 

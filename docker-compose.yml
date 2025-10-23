@@ -1,0 +1,35 @@
+services:
+  frontend:
+    container_name: resort-frontend
+    ports:
+      - "80:80"
+    volumes:
+      - .:/FrontEnd/app
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    container_name: resort-backend
+    env_file: .env
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/BackEnd/app
+    restart: always
+
+  mongodb:
+    image: mongo:6
+    container_name: resort-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: resortdb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  mongodata:

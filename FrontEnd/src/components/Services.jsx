@@ -1,4 +1,5 @@
 import React from "react"; 
+import { motion } from "framer-motion";
 
 
 const IconAccommodation = () => {
@@ -28,7 +29,15 @@ const IconWellness = () => {
 
 function Services(){
   return (
-    <section className="py-16 bg-slate-100">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      id="services" 
+      className="py-16 bg-slate-100"
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-semibold mb-8">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -51,7 +60,7 @@ function Services(){
           </article>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
